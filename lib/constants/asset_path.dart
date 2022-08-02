@@ -11,7 +11,14 @@ class AssetPath {
   static const String menuDichvu6 = '$prePath/lam-dep.png';
   static const String popularImage1 = '$prePath/popular-1.png';
   static const String popularImage2 = '$prePath/popular-2.png';
-  static const String homeIcon = '$prePath/home-icon.png';
+  static const String homeMenuBar = '$prePath/home-menu-bar.png';
+  static const String heartMenuBar = '$prePath/heart-menu-bar.png';
+  static const String cartMenuBar = '$prePath/cart-menu-bar.png';
+  static const String userMenuBar = '$prePath/user-menu-bar.png';
+  static const String homeMenuBarColor = '$prePath/home-menu-bar-color.png';
+  static const String heartMenuBarColor = '$prePath/heart-menu-bar-color.png';
+  static const String cartMenuBarColor = '$prePath/cart-menu-bar-color.png';
+  static const String userMenuBarColor = '$prePath/user-menu-bar-color.png';
   // ignore: constant_identifier_names
   static const String BackgroundMain = '$prePath/bannerMain.png';
   // ignore: constant_identifier_names

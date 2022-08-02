@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
 import 'package:thu_cung/config/app_color.dart';
+import 'package:thu_cung/constants/asset_path.dart';
 
 import '../config/app_style.dart';
 
@@ -10,9 +11,22 @@ import 'components/popular.dart';
 import 'components/search_bar.dart';
 import 'components/slider_bar.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
-  final int _currentIndex = 0;
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  int _currentIndex = 0;
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _currentIndex = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
@@ -37,38 +51,52 @@ class HomePage extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        currentIndex: _currentIndex,
-        items: const [
+        items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-              icon: Icon(
+              // ignore: deprecated_member_use
+              icon: Image.asset(
+                _currentIndex == 0
+                    ? AssetPath.homeMenuBarColor
+                    : AssetPath.homeMenuBar
                 // ignore: deprecated_member_use
-                FontAwesomeIcons.homeLgAlt,
-                color: DarkTheme.grey,
+                ,
               ),
               label: 'Home',
-              backgroundColor: Color.fromARGB(255, 169, 246, 182)),
+              backgroundColor: const Color.fromARGB(255, 255, 255, 255)),
           BottomNavigationBarItem(
-              icon: Icon(
-                FontAwesomeIcons.heart,
-                color: DarkTheme.grey,
-              ),
-              label: 'Like',
-              backgroundColor: DarkTheme.white),
+            icon: Image.asset(
+              _currentIndex == 1
+                  ? AssetPath.heartMenuBarColor
+                  : AssetPath.heartMenuBar
+              // ignore: deprecated_member_use
+              ,
+            ),
+            label: 'Like',
+          ),
           BottomNavigationBarItem(
-              icon: Icon(
-                FontAwesomeIcons.cartShopping,
-                color: DarkTheme.grey,
-              ),
-              label: 'Cart',
-              backgroundColor: DarkTheme.white),
+            icon: Image.asset(
+              _currentIndex == 2
+                  ? AssetPath.cartMenuBarColor
+                  : AssetPath.cartMenuBar
+              // ignore: deprecated_member_use
+              ,
+            ),
+            label: 'Cart',
+          ),
           BottomNavigationBarItem(
-              icon: Icon(
-                FontAwesomeIcons.user,
-                color: DarkTheme.grey,
-              ),
-              label: 'User',
-              backgroundColor: DarkTheme.white),
+            icon: Image.asset(
+              _currentIndex == 3
+                  ? AssetPath.userMenuBarColor
+                  : AssetPath.userMenuBar
+              // ignore: deprecated_member_use
+              ,
+            ),
+            label: 'User',
+          ),
         ],
+        currentIndex: _currentIndex,
+        selectedItemColor: DarkTheme.red,
+        onTap: _onItemTapped,
       ),
     );
   }

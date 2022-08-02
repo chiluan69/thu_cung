@@ -28,6 +28,6 @@ class GradientPalette {
   static final lightBlue2 = const Color(0xFF1DC7F7).withOpacity(0.94);
   static final black1 = const Color(0xFF111D42).withOpacity(0);
   static const black2 = Color(0xFF111D42);
-  static const xanhla1 = Color.fromARGB(255, 234, 255, 228);
-  static const xanhla2 = Color.fromARGB(255, 168, 255, 175);
+  static const xanhla1 = Color(0xFFEAF9E6);
+  static const xanhla2 = Color(0xFFEAF9E6);
 }

@@ -26,10 +26,12 @@ class SliderBar extends StatelessWidget {
                           height: 185,
                           width: 378,
                           decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              image: DecorationImage(
-                                  fit: BoxFit.cover,
-                                  image: AssetImage(e.backgroundImg))),
+                            borderRadius: BorderRadius.circular(10),
+                            image: DecorationImage(
+                              fit: BoxFit.cover,
+                              image: AssetImage(e.backgroundImg),
+                            ),
+                          ),
                         ),
                       ],
                     ),
@@ -38,6 +40,9 @@ class SliderBar extends StatelessWidget {
               ),
             )
             .toList(),
-        options: CarouselOptions(autoPlay: true, enlargeCenterPage: true));
+        options: CarouselOptions(
+          autoPlay: true,
+          enlargeCenterPage: true,
+        ));
   }
 }

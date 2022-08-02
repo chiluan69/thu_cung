@@ -27,7 +27,7 @@ class Menu extends StatelessWidget {
               gradient: const LinearGradient(
                 colors: [
                   GradientPalette.xanhla1,
-                  GradientPalette.xanhla1,
+                  GradientPalette.xanhla2,
                 ],
               ),
             ),
