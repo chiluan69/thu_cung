@@ -14,9 +14,11 @@ class Movie {
 
 class Movie1 {
   String popularImage;
+  String titleItem;
 
   Movie1({
     required this.popularImage,
+    required this.titleItem,
   });
 }
 
@@ -65,9 +67,11 @@ final List<Movie> movies = [
 final List<Movie1> movies1 = [
   Movie1(
     popularImage: AssetPath.popularImage1,
+    titleItem: 'Name item',
   ),
   Movie1(
     popularImage: AssetPath.popularImage2,
+    titleItem: 'Name item',
   ),
 ];
 

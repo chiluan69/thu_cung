@@ -32,22 +32,25 @@ class _HomePageState extends State<HomePage> {
     final Size size = MediaQuery.of(context).size;
     return Scaffold(
       body: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            //header
-            HomeHeader(size: size),
-            //search bar
-            SearchBar(size: size),
-            //slider
-            SliderBar(size: size),
-            // Image.asset(AssetPath.menuDichvu)
-            //MainMenu
-            // for (final movie in movies)
-            Menu(size: size),
-            buildTitle('Popular'),
-            const Popular(),
-          ],
+        child: Padding(
+          padding: const EdgeInsets.only(top: 10, bottom: 50),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              //header
+              HomeHeader(size: size),
+              //search bar
+              SearchBar(size: size),
+              //slider
+              SliderBar(size: size),
+              // Image.asset(AssetPath.menuDichvu)
+              //MainMenu
+              // for (final movie in movies)
+              Menu(size: size),
+              buildTitle('Popular'),
+              const Popular(),
+            ],
+          ),
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
